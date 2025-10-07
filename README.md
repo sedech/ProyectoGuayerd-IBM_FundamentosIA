@@ -1,5 +1,5 @@
 # 🧠 ProyectoGuayerd&IBM_FundamentosIA - Sprint 1  
-### 📊 Visor Interactivo de Información Comercial con Python y Streamlit
+### 📊 Dashboard Interactivo de Tienda Aurelion
 
 ---
 
@@ -17,8 +17,7 @@ El objetivo es desarrollar un **visor interactivo** en Python y Streamlit que pe
 ✅ Integrar múltiples fuentes de datos (archivos Excel).  
 ✅ Mostrar información de forma dinámica e interactiva.  
 ✅ Permitir filtros y visualizaciones básicas.  
-✅ Incluir documentación accesible dentro de la app.  
-✅ Dejar preparada la base para aplicar IA en el **Sprint 2**.
+
 
 ---
 
@@ -26,17 +25,20 @@ El objetivo es desarrollar un **visor interactivo** en Python y Streamlit que pe
 
 ProyectoGuayerd&IBM_FundamentosIA/
 │
-├── app.py # Archivo principal de Streamlit
+├── app.py  
 │
-├── data/ # Datos de entrada
+├── datasets/ # Datos de entrada
 │ ├── clientes.xlsx
 │ ├── productos.xlsx
 │ ├── ventas.xlsx
 │ └── detalle_ventas.xlsx
-│
+│  
+├── ddiagramas/  
+│ ├── dflujo_interface.png
+│ ├── flujo_programa.png
 ├── docs/ # Documentación
 │ ├── documentacion.md
 │ ├── instrucciones_copilot.md
 │
-├── requirements.txt # Dependencias del proyecto
-└── README.md # Guía general
+├── requirements.txt  
+└── README.md  
