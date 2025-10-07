@@ -2,7 +2,7 @@ import streamlit as st
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Dashboard de Ventas - Fundamentos IA", 
+    page_title="Dashboard Interactivo de Tienda Aurelion", 
     layout="wide",
     page_icon="📊"
 )

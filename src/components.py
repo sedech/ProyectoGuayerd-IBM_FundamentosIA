@@ -9,7 +9,7 @@ def mostrar_header():
         </style>
     """, unsafe_allow_html=True)
     
-    st.markdown('<h1 class="main-header">📊 Dashboard Interactivo de Ventas</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">📊 Dashboard Interactivo de Tienda Aurelion</h1>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">', unsafe_allow_html=True)
     st.markdown("**Curso:** Fundamentos de Inteligencia Artificial (Guayerd & IBM) - Sprint 1")
     st.markdown("**Autor:** Melchisedech Belizaire")

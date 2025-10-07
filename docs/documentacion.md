@@ -1,19 +1,19 @@
 # Proyecto Guayerd & IBM - Fundamentos en Inteligencia Artificial
 
-## 🧠 Tema
+##  Tema
 **Visualizador interactivo de datos de ventas.**
 
 Este proyecto permite integrar y visualizar información de diferentes fuentes relacionadas con ventas, productos y clientes, a través de una interfaz moderna desarrollada con **Streamlit**.
 
 ---
 
-## 🧩 Problema
+##  Problema
 En muchas empresas, los datos de ventas se encuentran dispersos en distintos archivos (clientes, productos, ventas y detalle de ventas).  
 Esto dificulta analizar la información, generar reportes rápidos y tomar decisiones informadas.
 
 ---
 
-## 💡 Solución
+##  Solución
 Desarrollar un **visor interactivo** que consolide todos los datos y permita:
 - Visualizar los registros unificados en una sola vista.
 - Filtrar por ciudad o categoría de producto.
@@ -39,7 +39,7 @@ Se utilizan cuatro archivos Excel como fuentes de datos:
 
 ---
 
-## ⚙️ Pasos del desarrollo
+##  Pasos del desarrollo
 
 1. Cargar los cuatro archivos Excel con `pandas`.
 2. Realizar uniones (`merge`) para obtener una vista consolidada.
@@ -50,6 +50,3 @@ Se utilizan cuatro archivos Excel como fuentes de datos:
    - Gráficos con **Plotly Express**.
 6. Organizar el contenido en pestañas temáticas.
 
----
-
-## 🔣 Pseudocódigo del programa
