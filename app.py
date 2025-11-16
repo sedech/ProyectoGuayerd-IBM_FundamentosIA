@@ -1,47 +1,65 @@
 import streamlit as st
+from src.components import mostrar_header
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Dashboard Interactivo de Tienda Aurelion", 
+    page_title="Dashboard Interactivo de Tienda Aurelion",
     layout="wide",
     page_icon="📊"
 )
 
-# Importar componentes
-from src.components import mostrar_header, mostrar_menu_principal
+# Estado inicial: ningún sprint seleccionado
+if "sprint_seleccionado" not in st.session_state:
+    st.session_state["sprint_seleccionado"] = None
 
-# Mostrar header y menú
+# Header
 mostrar_header()
-mostrar_menu_principal()
 
-# Navegación entre páginas
-if st.session_state.get('menu_seleccionado') == 'datos_originales':
-    from src.pages.datos_originales import mostrar_pagina_datos_originales
-    mostrar_pagina_datos_originales()
-    
-elif st.session_state.get('menu_seleccionado') == 'dashboard_filtros':
-    from src.pages.dashboard_filtros import mostrar_pagina_dashboard
-    mostrar_pagina_dashboard()
+# --------- Roadmap de Sprints / Demos ----------
+st.markdown("### 🧭 Roadmap de Sprints / Demos")
 
-else:
-    # Página de inicio
-    st.markdown("---")
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown("### 📁 Datos Originales")
-        st.markdown("""
-        - Visualización de datasets crudos
-        - Sin procesamiento ni filtros
-        - Ideal para revisión de datos fuente
-        """)
-    
-    with col2:
-        st.markdown("### 🔍 Dashboard con Filtros")
-        st.markdown("""
-        - Visualización interactiva
-        - Filtros avanzados
-        - Gráficos y KPIs dinámicos
-        """)
-    
-    st.info("👆 **Selecciona una opción del menú superior para comenzar**")
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    if st.button("🤖 1° Sprint Inteligencia Artificial", use_container_width=True):
+        st.session_state["sprint_seleccionado"] = "sprint1"
+
+with col2:
+    if st.button("🐍 2° Sprint Python (EDA)", use_container_width=True):
+        st.session_state["sprint_seleccionado"] = "sprint2"
+
+with col3:
+    if st.button("🚀 3° Sprint Machine Learning", use_container_width=True):
+        st.session_state["sprint_seleccionado"] = "sprint3"
+
+with col4:
+    if st.button("📊 4° Sprint Power BI", use_container_width=True):
+        st.session_state["sprint_seleccionado"] = "sprint4"
+
+st.markdown("---")
+
+sprint = st.session_state["sprint_seleccionado"]
+
+# ===================== HOME (sin sprint seleccionado) =====================
+if sprint is None:
+    st.info("👆 Selecciona uno de los **Sprints** de arriba para comenzar.")
+
+# ===================== 1° SPRINT =====================
+elif sprint == "sprint1":
+    from src.pages.sprint1_main import mostrar_pagina_sprint1
+    mostrar_pagina_sprint1()
+
+# ===================== 2° SPRINT =====================
+elif sprint == "sprint2":
+    from src.pages.eda_sprint2 import mostrar_pagina_eda
+    mostrar_pagina_eda()
+
+# ===================== 3° SPRINT =====================
+elif sprint == "sprint3":
+    from src.pages.sprint3_ml import mostrar_pagina_sprint3
+    mostrar_pagina_sprint3()
+
+# ===================== 4° SPRINT =====================
+elif sprint == "sprint4":
+    from src.pages.sprint4_powerbi import mostrar_pagina_sprint4
+    mostrar_pagina_sprint4()

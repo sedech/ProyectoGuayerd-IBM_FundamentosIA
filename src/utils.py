@@ -41,7 +41,8 @@ def configurar_filtros_sidebar(df):
     
     # Botón para resetear
     if st.sidebar.button("🔄 Resetear Filtros", use_container_width=True):
-        st.rerun()
+        # para versiones anteriores de Streamlit
+        st.experimental_rerun()
     
     return rango_fechas, ciudades, clientes, categorias, productos
 
